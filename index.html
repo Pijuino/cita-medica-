@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Veterinaria - Login</title>
+  <link rel="stylesheet" href="css\estiles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <script defer src="js\script.js"></script>
+</head>
+<body class="bg-light">
+  <div class="container mt-5" id="login-container">
+    <h2 class="text-center mb-4">Iniciar Sesión</h2>
+    <form id="login-form" class="card p-4 shadow">
+      <div class="mb-3">
+        <label for="username" class="form-label">Usuario</label>
+        <input type="text" class="form-control" id="username" required>
+      </div>
+      <div class="mb-3 position-relative">
+        <label for="password" class="form-label">Contraseña</label>
+        <div class="input-group">
+          <input type="password" class="form-control" id="password" required>
+          <button class="btn btn-outline-secondary" type="button" id="toggle-password">👁</button>
+        </div>
+        <div id="passwordHelp" class="form-text">8 caracteres, incluyendo mayúscula, número y símbolo.</div>
+      </div>
+      <button type="submit" class="btn btn-primary w-100">Entrar</button>
+      <a href="#" class="d-block text-center mt-2" id="forgot-password">¿Olvidaste tu contraseña?</a>
+    </form>
+    <div class="text-center mt-3">
+      <button class="btn btn-secondary" id="create-account-btn">Crear cuenta</button>
+    </div>
+  </div>
+
+  <!-- Página principal -->
+  <div class="container mt-5 d-none" id="main-page">
+    <nav class="nav mb-4">
+      <a class="nav-link" href="#" id="cita-link">🗓 Cita médica</a>
+      <a class="nav-link" href="#">📊 Reportes</a>
+      <a class="nav-link" href="#">👤 Ver mis datos</a>
+    </nav>
+
+    <div id="cita-form-container" class="card p-4 shadow d-none">
+      <h3>Agendar Cita Médica</h3>
+      <form id="cita-form">
+        <div class="mb-3">
+          <label class="form-label">Nombre del dueño</label>
+          <input type="text" class="form-control" id="dueno" required>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Nombre de la mascota</label>
+          <input type="text" class="form-control" id="mascota" required>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Fecha</label>
+          <input type="date" class="form-control" id="fecha" required>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Hora</label>
+          <input type="time" class="form-control" id="hora" required>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Síntomas</label>
+          <textarea class="form-control" id="sintomas" rows="3" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-success">Confirmar cita</button>
+      </form>
+      <div id="cita-confirmacion" class="alert alert-info mt-3 d-none"></div>
+    </div>
+  </div>
+</body>
+</html>

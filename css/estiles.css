@@ -1,0 +1,12 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#main-page nav .nav-link {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+#main-page nav .nav-link:hover {
+  text-decoration: underline;
+}
